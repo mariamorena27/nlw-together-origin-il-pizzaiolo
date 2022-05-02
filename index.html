@@ -9,6 +9,12 @@
     <!-- Icones -->
     <link rel="stylesheet" href="assets/style.css" />
 
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <!-- STYLES -->
     <link rel="stylesheet" href="style.css" />
 
@@ -29,9 +35,9 @@
           <ul class="grid">
             <li><a class="title" href="#home">Início</a></li>
             <li><a class="title" href="#about">História</a></li>
-            <li><a class="title" href="#services">Cardápio</a></li>
-            <li><a class="title" href="#testimonials">Avaliações</a></li>
-            <li><a class="title" href="#contact">Contato</a></li>
+            <li><a class="title" href="#menu-pizza">Cardápio</a></li>
+            <li><a class="title" href="#assessments">Avaliações</a></li>
+            <li><a class="title" href="#contact">Fale Conosco</a></li>
           </ul>
         </div>
         <!-- /menu -->
@@ -41,6 +47,7 @@
     </header>
 
     <main>
+      <!-- HOME -->
       <section class="section" id="home">
         <div class="container grid">
           <div class="image">
@@ -62,6 +69,7 @@
 
       <div class="divider-1"></div>
 
+      <!-- ABOUT -->
       <section class="section" id="about">
         <div class="container grid">
           <div class="image">
@@ -98,7 +106,8 @@
 
       <div class="divider-2"></div>
 
-      <section class="section" id="services">
+      <!-- CARDAPIO -->
+      <section class="section" id="menu-pizza">
         <div class="container grid">
           <header>
             <h2 class="title">Cardápio</h2>
@@ -139,8 +148,115 @@
           </div>
         </div>
       </section>
+
+      <div class="divider-1"></div>
+
+      <!-- AVALIAÇÕES -->
+      <section class="section" id="assessments">
+        <div class="container">
+          <header>
+            <h2 class="title">Avaliações de nossos clientes</h2>
+          </header>
+          <div class="assessments swiper-container">
+            <div class="swiper-wrapper">
+              <div class="assessment swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam ut illum adipisci pariatur porro facilis texto.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/men/72.jpg"
+                      alt="Foto de rosto de homem com barba"
+                    />
+                    Luiz Gustavo
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="assessment swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam ut illum adipisci pariatur porro facilis texto.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/17.jpg"
+                      alt="Foto de rosto de mulher"
+                    />
+                    Emille Souza
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="assessment swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam ut illum adipisci pariatur porro facilis texto.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/25.jpg"
+                      alt="Foto de rosto de mulher"
+                    />
+                    Flávia Oliveira
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <!-- CONTATO -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
+              iusto tenetur! Assumenda, placeat, id, modi voluptatibus omni.
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=+5532999197347&text=Oi! Gostaria de ver o cardapio!"
+              class="button"
+              target="_blank"
+              ><i class="icon-whatsapp"></i> Fale conosco</a
+            >
+          </div>
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> (32) 9 9919-7347</li>
+              <li>
+                <i class="icon-location"></i> Rua Sta Rita, nº87 - Eldorado
+              </li>
+              <li>
+                <i class="icon-message-square"></i> contato@ilpizzaiolo.com
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js -->
     <script src="main.js"></script>
   </body>
 </html>
