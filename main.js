@@ -54,7 +54,18 @@ scrollReveal.reveal(
   #about .text, #about .image,
   #menu-pizza header, #menu-pizza .card,
   #assessments header, #assessments .testmonials,
-  #contact .text, #contact .links
+  #contact .text, #contact .links,
+  footer .brand, footer . social
   `,
   { interval: 100 }
 )
+
+/* Back to the top */
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+})
