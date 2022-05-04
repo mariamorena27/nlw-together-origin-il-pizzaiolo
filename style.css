@@ -28,7 +28,7 @@ img {
   --base-color: hsl(var(--hue) 75% 50%);
   --base-color-second:hsl(var(--hue) 70% 70%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
-  --base-colo-scroll: hsl(var(--hue) 75% 55%);
+  --base-color-scroll: hsl(var(--hue) 75% 55%);
   --title-color: hsl(var(--hue)80% 10%);
   --text-color: hsl(0 0% 46%);
   --text-ticket-color: rgb(216, 29, 0);
@@ -595,7 +595,7 @@ footer .social a:hover {
 
   /* navigation */
   #header.scroll {
-    background: var(--base-colo-scroll);
+    background: var(--base-color-scroll);
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   }
 
