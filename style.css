@@ -23,13 +23,15 @@ img {
   --header-height: 4.5rem;
 
   /* colors */
-  --hue: 37;
+  --hue: 10;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 80% 50%);
-  --base-color-second:hsl(var(--hue) 65% 88%);
+  --base-color: hsl(var(--hue) 75% 50%);
+  --base-color-second:hsl(var(--hue) 70% 70%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
+  --base-colo-scroll: hsl(var(--hue) 75% 55%);
   --title-color: hsl(var(--hue)80% 10%);
   --text-color: hsl(0 0% 46%);
+  --text-ticket-color: rgb(216, 29, 0);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
 
@@ -291,7 +293,8 @@ nav.show div.icon-cross {
   border-radius: 0.25rem;
 }
 
-#home .text {
+#home .text,
+#home .text-ticket {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   text-align: center;
@@ -302,7 +305,21 @@ nav.show div.icon-cross {
 }
 
 #home .text p {
+  margin-bottom: 1.5rem;
+}
+
+#home .text ul li {
   margin-bottom: 2rem;
+}
+
+#home .text-ticket {
+  color: var(--title-color);
+  transition: 0.2s;
+}
+
+#home .text-ticket:hover {
+  color: var(--text-ticket-color);
+  transform: scale(1.15,1.15);
 }
 
 /* ===== ABOUT ===================== */
@@ -343,6 +360,10 @@ nav.show div.icon-cross {
   margin-right: 1.5rem;
 }
 
+#about .text p strong {
+  color: var(--base-color-);
+}
+
 /* ===== CARDAPIO ===================== */
 .cards.grid {
   gap: 1.5rem;
@@ -356,16 +377,32 @@ nav.show div.icon-cross {
   text-align: center;
 }
 
-.card i {
+.card img {
   display: block;
-  margin-bottom: 1.5rem;
-  font-size: 5rem;
-  color: var(--base-color);
+  margin: auto auto;
+  max-height: 20rem;
+  width: fit-content;
+  justify-content: center;
 }
 
 .card .title {
   font-size: 1.5rem;
+  margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.card ul {
+  display: inline-block;
+  list-style-type: circle;
+  align-items: center;
+  width: fit-content;
+  transition: 0.2s;
+}
+
+.card ul li:hover {
+  color: var(--base-color);
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* ===== ASSESSMENTS ===================== */
@@ -557,6 +594,27 @@ footer .social a:hover {
   }
 
   /* navigation */
+  #header.scroll {
+    background: var(--base-colo-scroll);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+
+  #header.scroll .title {
+    color: var(--text-color-light);
+  }
+    
+  #header.scroll .logo span {
+    color: white;
+  }
+    
+  #header.scroll .icon-menu_book {
+    color: white;
+  }
+
+  #header.scroll nav ul li a::after {
+    background: var(--text-color-light);
+  }
+
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -602,6 +660,14 @@ footer .social a:hover {
     order: 0;
     max-width: 24rem;
     text-align: left;
+  }
+
+  #home .text-ticket {
+    position: absolute;
+    bottom: 8rem;
+    max-width: 24rem;
+    text-align: left;
+    font-size: 1.125rem;
   }
 
   /* about */
